@@ -1,12 +1,12 @@
 {
-  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 2,
   "settings": {
     "appearanceTools": true,
     "color": {
       "defaultPalette": false,
       "palette": [
-        { "slug": "u-white", "color": "rgb(255,255,254)", "name": "Udemy White" },
+        { "slug": "u-white", "color": "rgb(255,255,255)", "name": "Udemy White" },
         { "slug": "u-gray-100", "color": "rgb(243 244 246)", "name": "Udemy Gray 100" },
         { "slug": "u-gray-200", "color": "rgb(229 231 235)", "name": "Udemy Gray 200" },
         { "slug": "u-gray-300", "color": "rgb(209 213 219)", "name": "Udemy Gray 300" },
@@ -25,15 +25,18 @@
       ],
       "background": true,
       "text": true,
-      "link": false,
+      "link": true,
       "custom": true,
       "duotone": [
         { "slug": "u-pink-sunset", "colors": ["#11245e", "#dc4379"], "name": "Udemy Pink Sunset" }
       ],
       "defaultGradients": false,
       "gradients": [
-        { "slug": "u-summer-dog","name": "Udemy Summer Dog", "gradient": "linear-gradient(#a8ff78, #78ffd6)"  }
-
+        {
+          "slug": "u-summer-dog",
+          "name": "Udemy Summer Dog",
+          "gradient": "linear-gradient(#a8ff78, #78ffd6)"
+        }
       ]
     },
     "blocks": {
@@ -50,14 +53,13 @@
         },
         "typography": {
           "fontFamilies": [
-            {
-              "fontFamily": "pacifico, sans-serif",
+            { 
+              "fontFamily": "Pacifico, sans-serif", 
               "slug": "u-pacifico",
-              "name": "Udemy Pacifico"
+              "name": "Udemy Pacifico" 
             }
           ]
         }
-
       },
       "core/cover": {
         "color": {
@@ -80,10 +82,10 @@
     },
     "typography": {
       "fontFamilies": [
-        {
-          "fontFamily": "Rubik, sans-serif",
+        { 
+          "fontFamily": "Rubik, sans-serif", 
           "slug": "u-rubik",
-          "name": "Udemy Rubik"
+          "name": "Udemy Rubik" 
         }
       ],
       "fontSizes": [
@@ -98,7 +100,8 @@
       "fontWeight": true,
       "fontStyle": true,
       "textTransform": true,
-      "letterSpacing": true
+      "letterSpacing": true,
+      "textDecoration": true
     },
     "layout": {
       "contentSize": "800px",
@@ -128,8 +131,7 @@
     "blocks": {
       "core/button": {
         "color": {
-          "gradient": "var(--wp--preset--gradient--u-summer-dog)",
-          "text": "var(--wp--preset--color--black)"
+          "gradient": "var(--wp--preset--gradient--u-summer-dog)"
         }
       },
       "core/pullquote": {
@@ -141,7 +143,9 @@
         }
       },
       "core/site-title": {
-        "fontFamily": "var(--wp--preset--font-family-u-pacifico)"
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--u-pacifico)"
+        }
       }
     },
     "typography": {
@@ -156,17 +160,26 @@
     "spacing": {
       "margin": {
         "top": "0px",
+        "bottom": "0px",
         "left": "0px",
-        "right": "0px",
-        "bottom": "0px"
+        "right": "0px"
       },
-      "pading": {
+      "padding": {
         "top": "0px",
+        "bottom": "0px",
         "left": "0px",
-        "right": "0px",
-        "bottom": "0px"
+        "right": "0px"
       },
       "blockGap": "4rem"
     }
-  }
+  },
+  "customTemplates": [
+    {
+      "name": "full-width-page",
+      "title": "Full Width Page",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ]
 }
